@@ -1,0 +1,123 @@
+<!DOCTYPE html> <html><head>
+        <title>Phoenix Chen_Unit 5 Project</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+    <style>html,
+body {
+    font-family: 'Archivo';
+    background-color: #e01f8a;
+    text-align: center;
+}
+
+.questions {
+    font-family: "Archivo";
+    font-size: 17px;
+}
+
+.title {
+    font-family: 'Veranda';
+    font-size: 26px;
+}
+
+img {
+    width: 600px;
+    margin: 10px 0px 48px 0px;
+}
+
+.Bloom {
+    display: none;
+}
+
+.Musa {
+    display: none;
+}
+
+.Flora {
+    display: none;
+}
+
+.Aisha {
+    display: none;
+}
+
+.tryAgain {
+    display: none;
+    padding: 40px;
+}
+
+innerHTML {
+    font-size: 30px;
+}
+
+h3 {
+    text-align: center;
+}</style></head>
+    <body>
+        <div class="title">
+            <h1>Which Winx Club Member are You?</h1>
+        </div>
+        <div class="questions">
+            <h3>How well do you ride a bike?
+                (1 being least skilled)
+            </h3>
+            <img src="https://pbs.twimg.com/media/FShY_8sUUAIesRn.jpg">
+            <input class="bike" placeholder="Write a number 0-10">
+            <h3>Do you consider yourself an introvert?</h3>
+            <input class="introvert" placeholder="yes or no">
+
+            <img src="https://choices.scholastic.com/content/dam/classroom-magazines/choices/issues/2019-20/030120/guide-to-being-an-introvert/CHO-030120-Introvert-popup1.jpg">
+        </div>
+        <button> Submit </button>
+        <div class="result">
+
+        </div>
+
+        <div class="Bloom">
+            <img src="https://i.pinimg.com/originals/3c/79/06/3c7906e4782fade05320c78625635d4e.png">
+        </div>
+        <div class="Musa">
+            <img src="https://static.wikia.nocookie.net/charactercommunity/images/2/26/39725-1431880431.png/revision/latest?cb=20191124054657">
+        </div>
+        <div class="Flora">
+            <img src="https://i.pinimg.com/originals/52/e1/72/52e1728722dc0bea5c90120033f45b93.png">
+        </div>
+        <div class="Aisha">
+            <img src="https://i.pinimg.com/originals/64/eb/f5/64ebf5c2aa8a94ba39c7e067f7804311.png">
+        </div>
+        <div>
+            <img class="tryAgain" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnE4_nIE4YvyNGTR0umHtiJbx1A6U4Lt838w&amp;usqp=CAU">
+        </div>
+
+    
+<script>
+/*__POPCODESTART__*/
+var button = document.querySelector("button");
+var result = document.querySelector(".result");
+var tryAgain = document.querySelector(".tryAgain");
+var Musa = document.querySelector(".Musa");
+var Bloom = document.querySelector(".Bloom");
+var Aisha = document.querySelector(".Aisha");
+var Flora = document.querySelector(".Flora");
+
+button.onclick = function () {
+  var bike = document.querySelector(".bike").value;
+  var introvert = document.querySelector(".introvert").value;
+
+  if (bike >= 0 && bike <= 5 && introvert === "yes") {
+    result.innerHTML = "You said " + introvert + " to being introverted, you are Bloom!";
+    Bloom.style.display = "block";
+  } else if (bike >= 6 && bike <= 10 && introvert === "yes") {
+    result.innerHTML = "You said " + introvert + " to being introverted, you are Musa!";
+    Musa.style.display = "block";
+  } else if (bike >= 6 && bike <= 10 && introvert === "no") {
+    result.innerHTML = "You said " + introvert + " to being introverted, you are Aisha!";
+    Aisha.style.display = "block";
+  } else if (bike >= 0 && bike <= 5 && introvert === "no") {
+    result.innerHTML = "You said " + introvert + " to being introverted, you are Flora!";
+    Flora.style.display = "block";
+  } else {
+    result.style.display = "block";
+    result.innerHTML = "TRY AGAIN";
+    tryAgain.style.display = "block";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbImJ1dHRvbiIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsInJlc3VsdCIsInRyeUFnYWluIiwiTXVzYSIsIkJsb29tIiwiQWlzaGEiLCJGbG9yYSIsIm9uY2xpY2siLCJiaWtlIiwidmFsdWUiLCJpbnRyb3ZlcnQiLCJpbm5lckhUTUwiLCJzdHlsZSIsImRpc3BsYXkiXSwibWFwcGluZ3MiOiJBQUFBLElBQUlBLE1BQU0sR0FBR0MsUUFBUSxDQUFDQyxhQUFULENBQXVCLFFBQXZCLENBQWI7QUFDQSxJQUFJQyxNQUFNLEdBQUdGLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixDQUFiO0FBQ0EsSUFBSUUsUUFBUSxHQUFHSCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsV0FBdkIsQ0FBZjtBQUNBLElBQUlHLElBQUksR0FBR0osUUFBUSxDQUFDQyxhQUFULENBQXVCLE9BQXZCLENBQVg7QUFDQSxJQUFJSSxLQUFLLEdBQUdMLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixRQUF2QixDQUFaO0FBQ0EsSUFBSUssS0FBSyxHQUFHTixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsUUFBdkIsQ0FBWjtBQUNBLElBQUlNLEtBQUssR0FBR1AsUUFBUSxDQUFDQyxhQUFULENBQXVCLFFBQXZCLENBQVo7O0FBQ0FGLE1BQU0sQ0FBQ1MsT0FBUCxHQUFpQixZQUFXO0FBQ3hCLE1BQUlDLElBQUksR0FBR1QsUUFBUSxDQUFDQyxhQUFULENBQXVCLE9BQXZCLEVBQWdDUyxLQUEzQztBQUNBLE1BQUlDLFNBQVMsR0FBR1gsUUFBUSxDQUFDQyxhQUFULENBQXVCLFlBQXZCLEVBQXFDUyxLQUFyRDs7QUFDQSxNQUFLRCxJQUFJLElBQUksQ0FBUixJQUFhQSxJQUFJLElBQUksQ0FBdEIsSUFBNkJFLFNBQVMsS0FBSyxLQUEvQyxFQUF1RDtBQUNuRFQsSUFBQUEsTUFBTSxDQUFDVSxTQUFQLEdBQW1CLGNBQWNELFNBQWQsR0FBMEIsdUNBQTdDO0FBQ0FOLElBQUFBLEtBQUssQ0FBQ1EsS0FBTixDQUFZQyxPQUFaLEdBQXNCLE9BQXRCO0FBQ0gsR0FIRCxNQUdPLElBQUtMLElBQUksSUFBSSxDQUFSLElBQWFBLElBQUksSUFBSSxFQUF0QixJQUE4QkUsU0FBUyxLQUFLLEtBQWhELEVBQXdEO0FBQzNEVCxJQUFBQSxNQUFNLENBQUNVLFNBQVAsR0FBbUIsY0FBY0QsU0FBZCxHQUEwQixzQ0FBN0M7QUFDQVAsSUFBQUEsSUFBSSxDQUFDUyxLQUFMLENBQVdDLE9BQVgsR0FBcUIsT0FBckI7QUFDSCxHQUhNLE1BR0EsSUFBS0wsSUFBSSxJQUFJLENBQVIsSUFBYUEsSUFBSSxJQUFJLEVBQXRCLElBQThCRSxTQUFTLEtBQUssSUFBaEQsRUFBdUQ7QUFDMURULElBQUFBLE1BQU0sQ0FBQ1UsU0FBUCxHQUFtQixjQUFjRCxTQUFkLEdBQTBCLHVDQUE3QztBQUNBTCxJQUFBQSxLQUFLLENBQUNPLEtBQU4sQ0FBWUMsT0FBWixHQUFzQixPQUF0QjtBQUNILEdBSE0sTUFHQSxJQUFLTCxJQUFJLElBQUksQ0FBUixJQUFhQSxJQUFJLElBQUksQ0FBdEIsSUFBNkJFLFNBQVMsS0FBSyxJQUEvQyxFQUFzRDtBQUN6RFQsSUFBQUEsTUFBTSxDQUFDVSxTQUFQLEdBQW1CLGNBQWNELFNBQWQsR0FBMEIsdUNBQTdDO0FBQ0FKLElBQUFBLEtBQUssQ0FBQ00sS0FBTixDQUFZQyxPQUFaLEdBQXNCLE9BQXRCO0FBQ0gsR0FITSxNQUdBO0FBQ0haLElBQUFBLE1BQU0sQ0FBQ1csS0FBUCxDQUFhQyxPQUFiLEdBQXVCLE9BQXZCO0FBQ0FaLElBQUFBLE1BQU0sQ0FBQ1UsU0FBUCxHQUFtQixXQUFuQjtBQUNBVCxJQUFBQSxRQUFRLENBQUNVLEtBQVQsQ0FBZUMsT0FBZixHQUF5QixPQUF6QjtBQUNIO0FBRUosQ0FyQkQiLCJzb3VyY2VzQ29udGVudCI6WyJsZXQgYnV0dG9uID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcImJ1dHRvblwiKTtcbmxldCByZXN1bHQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKTtcbmxldCB0cnlBZ2FpbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIudHJ5QWdhaW5cIik7XG5sZXQgTXVzYSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuTXVzYVwiKTtcbmxldCBCbG9vbSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuQmxvb21cIik7XG5sZXQgQWlzaGEgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLkFpc2hhXCIpO1xubGV0IEZsb3JhID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5GbG9yYVwiKTtcbmJ1dHRvbi5vbmNsaWNrID0gZnVuY3Rpb24oKSB7XG4gICAgbGV0IGJpa2UgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmJpa2VcIikudmFsdWU7XG4gICAgbGV0IGludHJvdmVydCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuaW50cm92ZXJ0XCIpLnZhbHVlO1xuICAgIGlmICgoYmlrZSA+PSAwICYmIGJpa2UgPD0gNSkgJiYgKGludHJvdmVydCA9PT0gXCJ5ZXNcIikpIHtcbiAgICAgICAgcmVzdWx0LmlubmVySFRNTCA9IFwiWW91IHNhaWQgXCIgKyBpbnRyb3ZlcnQgKyBcIiB0byBiZWluZyBpbnRyb3ZlcnRlZCwgeW91IGFyZSBCbG9vbSFcIjtcbiAgICAgICAgQmxvb20uc3R5bGUuZGlzcGxheSA9IFwiYmxvY2tcIjtcbiAgICB9IGVsc2UgaWYgKChiaWtlID49IDYgJiYgYmlrZSA8PSAxMCkgJiYgKGludHJvdmVydCA9PT0gXCJ5ZXNcIikpIHtcbiAgICAgICAgcmVzdWx0LmlubmVySFRNTCA9IFwiWW91IHNhaWQgXCIgKyBpbnRyb3ZlcnQgKyBcIiB0byBiZWluZyBpbnRyb3ZlcnRlZCwgeW91IGFyZSBNdXNhIVwiO1xuICAgICAgICBNdXNhLnN0eWxlLmRpc3BsYXkgPSBcImJsb2NrXCI7XG4gICAgfSBlbHNlIGlmICgoYmlrZSA+PSA2ICYmIGJpa2UgPD0gMTApICYmIChpbnRyb3ZlcnQgPT09IFwibm9cIikpIHtcbiAgICAgICAgcmVzdWx0LmlubmVySFRNTCA9IFwiWW91IHNhaWQgXCIgKyBpbnRyb3ZlcnQgKyBcIiB0byBiZWluZyBpbnRyb3ZlcnRlZCwgeW91IGFyZSBBaXNoYSFcIjtcbiAgICAgICAgQWlzaGEuc3R5bGUuZGlzcGxheSA9IFwiYmxvY2tcIjtcbiAgICB9IGVsc2UgaWYgKChiaWtlID49IDAgJiYgYmlrZSA8PSA1KSAmJiAoaW50cm92ZXJ0ID09PSBcIm5vXCIpKSB7XG4gICAgICAgIHJlc3VsdC5pbm5lckhUTUwgPSBcIllvdSBzYWlkIFwiICsgaW50cm92ZXJ0ICsgXCIgdG8gYmVpbmcgaW50cm92ZXJ0ZWQsIHlvdSBhcmUgRmxvcmEhXCI7XG4gICAgICAgIEZsb3JhLnN0eWxlLmRpc3BsYXkgPSBcImJsb2NrXCI7XG4gICAgfSBlbHNlIHtcbiAgICAgICAgcmVzdWx0LnN0eWxlLmRpc3BsYXkgPSBcImJsb2NrXCI7XG4gICAgICAgIHJlc3VsdC5pbm5lckhUTUwgPSBcIlRSWSBBR0FJTlwiO1xuICAgICAgICB0cnlBZ2Fpbi5zdHlsZS5kaXNwbGF5ID0gXCJibG9ja1wiO1xuICAgIH1cblxufTsiXX0=</script></body></html>
